@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+  frps:
+    image: snowdreamtech/frpc
+    restart: always
+    network_mode: host
+    ports:
+      - "7000:7000"
+    volumes: 
+      - "./frpc.ini:/etc/frp/frpc.ini"
